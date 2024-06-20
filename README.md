@@ -1,5 +1,5 @@
 # MasterThesis
-This repository contains the MATLAB files used to train the ANNs, and the files which generated the main results. Following is a description to each file.
+This repository contains the MATLAB files used for ANN training, parameter estimation and model simulation, and the files that generated the main results. Following is a description to each file.
 
 <br/> **Folder: Results** <br/> 
 *resultsAll.m:*<br/> 
