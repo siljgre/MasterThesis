@@ -1,5 +1,5 @@
 # MasterThesis
-This repository contains the MATLAB files used to train the ANNs, and the files which generated the main results. Following is a description to each file.
+This repository contains the MATLAB files used for ANN training, parameter estimation and model simulation, and the files that generated the main results. Following is a description to each file.
 
 <br/> **Folder: Results** <br/> 
 *resultsAll.m:*<br/> 
@@ -37,5 +37,13 @@ Here, an explanation is provided for the folder "ANN phase 1 - lsqnonlin - 1 out
 *hybridODE.m* <br/> Function defining the hybrid model.
 
 <br/> **Folder: Parameter Estimation**<br/> 
+Contains the scripts and the results from parameter estimation with Monte Carlo simulation of the mechanistic model parameters of the hybrid models and the fully-mechanistic SoA model. Both folders have the same content, and a general explanation is given.
 
+*param_est_split.m*:<br/>
+Performs the optimization/parameter estimation.
 
+*MonteCarlo.m*: <br/>
+Performs the Monte Carlo simulation, calling *param_est_split.m* for each iteration.
+
+xlsx.files: <br/>
+Contains the results from the Monte Carlo simulation.
