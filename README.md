@@ -28,12 +28,13 @@ Function that plots the state predictions (X, S and CO2) along with the experime
 Function that iterates through files, computes the cost and returns the file with the lowest cost.
 
 <br/> **Folder: ANN training**<br/> 
-This folder contains folders for ANN training for each phase and number of ANN outputs. All files have the same content, but they have different definitions of number of outputs and different loading of training data.
-For example:
-<br/>**Subfolder: ANN phase 1 - lsqnonlin - 1 output**<br/> 
-Contains a folder _expdata_, cosisting of the training data, and _results_, which consists of the results from ANN training.
-*ANNmu_lsqnonlin:* <br/> Script for ANN training.
-*hybridODE.m* <br/> The definition of the hybrid model.
+This folder contains subfolders for ANN training for each phase and number of ANN outputs. All folders have the same content, but the scripts are different in definitions of number of outputs, and what training data is used (different between phase 1 and phase 2).
+
+Here, an explanation is provided for the folder "ANN phase 1 - lsqnonlin - 1 output":
+
+*ANNmu_lsqnonlin:* <br/> Script for ANN training. Loads training data from the folder "expdata", and saves the results to the folder "results".
+
+*hybridODE.m* <br/> Function defining the hybrid model.
 
 <br/> **Folder: Parameter Estimation**<br/> 
 
