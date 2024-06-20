@@ -5,7 +5,6 @@ t_exp1 = exp1.tspan; y_exp1 = exp1.sol;
 t_exp2 = exp2.tspan; y_exp2 = exp2.sol;
 
 % Phase 1
-% par1 = [0.41380481	1.477764447	0.15027371	0.827041578	0.999999966];%1_3_phase1
 par1 = [0.72815676	1.069704479	0.435185161	1.596612687	2.421610953]; %MC PHASE 2 bounds, 1_3_phase2 
 
 y0 = init_cond();
@@ -13,7 +12,6 @@ tspan = [0 9.5];
 [t_ode1,y_ode1] = ode15s(@(t, y) originalODE(t, y, par1), tspan, y0);
 
 % Phase 2
-% par2 = [0.9858    5.4584    0.0040   0.8064    1.6550]; %estimated with lsqnonlin ONLY ONE
 par2 = [1.680780247	10	0.003959245	0.80574189	1.6293062]; %estimated with MC, bounds phase 2
 y0 = [(y_exp1(21,1)+y_exp2(27,1))/2 (y_exp1(21,2)+y_exp2(27,2))/2 (y_exp1(21,3)+y_exp2(27,3))/2 (y_exp1(21,4)+y_exp2(27,4))/2]; %using the mean of the 2 experiments as initial cond in ode model
 tspan = [10 21];
