@@ -13,7 +13,6 @@ load expdata\DataInterp_exp1_hours_phase2AdditionalData_SMOOTH.mat tspan sol
 t_exp1 = tspan;
 y_exp1 = sol;
 
-
 par = param();
 tspan = [10 21];
 y0 = [(y_exp1(1,1)+y_exp2(1,1))/2 (y_exp1(1,2)+y_exp2(1,2))/2 (y_exp1(1,3)+y_exp2(1,3))/2 (y_exp1(1,4)+y_exp2(1,4))/2]; %using the mean of the 2 experiments as initial cond in ode model
@@ -28,9 +27,6 @@ net_mu.layers{end}.transferFcn = 'tansig'; %tansig, logsig, poslin, softmax
 
 initialWeights_mu = getwb(net_mu);
 initialWeights_mu = randn(size(initialWeights_mu)) * 0.1;
-
-% load 'ANN_combExp_2layers_163.mat' optimalWeights_mu
-% initialWeights_mu = optimalWeights_mu;
 
 % Define the cost function
 costFunction = @(weights) computeCost(weights, net_mu, tspan, y0, y_exp1, y_exp2, y_ode,t_exp1,t_exp2,t_ode);

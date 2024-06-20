@@ -1,6 +1,6 @@
 clear
 % Define the path to this folder
-thisFolder = 'C:\Users\silje\NTNU\Master - Code\Results';
+thisFolder = 'C:\Users\silje\NTNU\MasterThesis - Code\Results';
 % Define the experimental data
 exp1 = "expdata\DataInterp_exp1_hours.mat";
 exp2 = "expdata\DataInterp_exp2_2_hours_SMOOTH.mat";
@@ -9,10 +9,10 @@ exp2 = "expdata\DataInterp_exp2_2_hours_SMOOTH.mat";
 
 %% 1 output
 % Find hybrid model with lowest cost (in each phase) and save it to this folder
-folder1 = 'C:\Users\silje\NTNU\Master - Code\ANN training\ANN phase 1 - lsqnonlin - 1 output\results';
+folder1 = 'C:\Users\silje\NTNU\MasterThesis - Code\ANN training\ANN phase 1 - lsqnonlin - 1 output\results';
 file1 = copyminCostFile(folder1,thisFolder);
 
-folder2 = 'C:\Users\silje\NTNU\Master - Code\ANN training\ANN phase 2 - lsqnonlin - 1 output\results';
+folder2 = 'C:\Users\silje\NTNU\MasterThesis - Code\ANN training\ANN phase 2 - lsqnonlin - 1 output\results';
 file2 = copyminCostFile(folder2,thisFolder);
 
 [poslin1,tansig1,logsig1] = saveHypSearchRes(folder1);
@@ -32,10 +32,10 @@ save(fullfile(folder,filename),'poslin1','tansig1','logsig1','poslin2','tansig2'
 [RMSE1phase,RMSE1exp,meanRMSE1,meanRMSE1vec] = combResFunc2('1output',file1,file2,exp1,exp2); %this the RMSE in each state (summed exp1 and exp2 deviation)
 
 %% 2 output
-folder1 = 'C:\Users\silje\NTNU\Master - Code\ANN training\ANN phase 1 - lsqnonlin - 2 output\results';
+folder1 = 'C:\Users\silje\NTNU\MasterThesis - Code\ANN training\ANN phase 1 - lsqnonlin - 2 output\results';
 file1 = copyminCostFile(folder1,thisFolder);
 
-folder2 = 'C:\Users\silje\NTNU\Master - Code\ANN training\ANN phase 2 - lsqnonlin - 2 output\results';
+folder2 = 'C:\Users\silje\NTNU\MasterThesis - Code\ANN training\ANN phase 2 - lsqnonlin - 2 output\results';
 file2 = copyminCostFile(folder2,thisFolder);
 
 [poslin1,tansig1,logsig1] = saveHypSearchRes(folder1);
@@ -56,10 +56,10 @@ save(fullfile(folder,filename),'poslin1','tansig1','logsig1','poslin2','tansig2'
 [RMSE2phase,RMSE2exp,meanRMSE2,meanRMSE2vec] = combResFunc2('2output',file1,file2,exp1,exp2);
 
 %% 3 output
-folder1 = 'C:\Users\silje\NTNU\Master - Code\ANN training\ANN phase 1 - lsqnonlin - 3 output\results';
+folder1 = 'C:\Users\silje\NTNU\MasterThesis - Code\ANN training\ANN phase 1 - lsqnonlin - 3 output\results';
 file1 = copyminCostFile(folder1,thisFolder);
 
-folder2 = 'C:\Users\silje\NTNU\Master - Code\ANN training\ANN phase 2 - lsqnonlin - 3 output\results';
+folder2 = 'C:\Users\silje\NTNU\MasterThesis - Code\ANN training\ANN phase 2 - lsqnonlin - 3 output\results';
 file2 = copyminCostFile(folder2,thisFolder);
 
 
@@ -80,10 +80,10 @@ save(fullfile(folder,filename),'poslin1','tansig1','logsig1','poslin2','tansig2'
 [RMSE3phase,RMSE3exp,meanRMSE3,meanRMSE3vec] = combResFunc2('3output',file1,file2,exp1,exp2);
 
 %% 4 output
-folder1 = 'C:\Users\silje\NTNU\Master - Code\ANN training\ANN phase 1 - lsqnonlin - 4 output\results';
+folder1 = 'C:\Users\silje\NTNU\MasterThesis - Code\ANN training\ANN phase 1 - lsqnonlin - 4 output\results';
 file1 = copyminCostFile(folder1,thisFolder);
 
-folder2 = 'C:\Users\silje\NTNU\Master - Code\ANN training\ANN phase 2 - lsqnonlin - 4 output\results';
+folder2 = 'C:\Users\silje\NTNU\MasterThesis - Code\ANN training\ANN phase 2 - lsqnonlin - 4 output\results';
 file2 = copyminCostFile(folder2,thisFolder);
 
 

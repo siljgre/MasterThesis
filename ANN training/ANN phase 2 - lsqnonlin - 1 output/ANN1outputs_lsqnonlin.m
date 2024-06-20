@@ -87,7 +87,7 @@ function dydt = originalODE(t, y, par)
 end
     
 function cost = computeCost(weights, net, tspan, y0, y_exp1, y_exp2,y_ode,t_exp1,t_exp2,t_ode)
-    % Update the ANN with the current weight
+% Update the ANN with the current weight
     net = setwb(net, weights);
     % Solve hybrid model
     [t, y] = ode15s(@(t, y) hybridODE(t, y, net), tspan, y0);

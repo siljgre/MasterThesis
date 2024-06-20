@@ -7,7 +7,7 @@ function file = minCostFile(folder)
     for k = 1:length(matFiles)
         file = matFiles(k).name;
         f = load(file);
-        cost = computeCostlsq(f.y_exp1, f.y_exp2, f.y_ode, f.t_exp1, f.t_exp2, f.t_ode,f.t,f.y);
+        cost = computeCostlsq(f.y_exp1, f.y_exp2, f.t_exp1, f.t_exp2,f.t,f.y);
         if cost < mincost
             mincost = cost;
             mincostfile = file;
@@ -16,7 +16,7 @@ function file = minCostFile(folder)
     
     file = mincostfile;
     
-    function cost = computeCostlsq(y_exp1, y_exp2,y_ode,t_exp1,t_exp2,t_ode,t,y)
+    function cost = computeCostlsq(y_exp1, y_exp2,t_exp1,t_exp2,t,y)
         % Interpolate the ANN output t and y to match the times of each experiment and the ode, for the norm calculation
         y1= interp1(t, y, t_exp1, 'linear', 'extrap');
         y2= interp1(t, y, t_exp2, 'linear', 'extrap');
