@@ -37,5 +37,13 @@ Here, an explanation is provided for the folder "ANN phase 1 - lsqnonlin - 1 out
 *hybridODE.m* <br/> Function defining the hybrid model.
 
 <br/> **Folder: Parameter Estimation**<br/> 
+Contains the scripts and the results from parameter estimation with Monte Carlo simulation of the mechanistic model parameters of the hybrid models and the fully-mechanistic SoA model. Both folders have the same content, and a general explanation is given.
 
+*param_est_split.m*:<br/>
+Performs the optimization/parameter estimation.
 
+*MonteCarlo.m*: <br/>
+Performs the Monte Carlo simulation, calling *param_est_split.m* for each iteration.
+
+xlsx.files: <br/>
+Contains the results from the Monte Carlo simulation.
