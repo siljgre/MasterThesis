@@ -47,3 +47,6 @@ Performs the Monte Carlo simulation, calling *param_est_split.m* for each iterat
 
 xlsx.files: <br/>
 Contains the results from the Monte Carlo simulation.
+
+<br/> **Folder: Experimental Data**<br/> 
+Contains files with the experimental data and scripts that were used to plot the data.

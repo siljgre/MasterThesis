@@ -2,7 +2,7 @@ clear
 
 for i = 9:10
     i
-filename = strcat('22_logsig_10_10_',num2str(i)); %save to file
+filename = strcat('22_logsig_10_',num2str(i)); %save to file
 tic 
 
 load expdata\DataInterp_exp2_2_hours_SMOOTH.mat tspan sol
@@ -19,7 +19,7 @@ y0 = [(y_exp1(1,1)+y_exp2(1,1))/2 (y_exp1(1,2)+y_exp2(1,2))/2 (y_exp1(1,3)+y_exp
 [t_ode, y_ode] = ode15s(@(t, y) originalODE(t, y, par), tspan, y0);
 
 %% Set up the Neural Network.
-net_mu = feedforwardnet([10 10]); %hidden layer size
+net_mu = feedforwardnet([10]); %hidden layer size
 net_mu.inputs{1}.size = 4; % input are the states 
 net_mu.layers{end}.size = 2; % output is the parameter
 
