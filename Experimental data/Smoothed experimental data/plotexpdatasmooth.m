@@ -1,11 +1,18 @@
 load DataInterp_exp2_2_hours tspan sol
 t = tspan(27:end,:); x = sol(27:end,:);
-
 load DataInterp_exp2_2_hours_phase2_SMOOTH.mat tspan sol
 ts = tspan; xs = sol;
 
+plotSubplotsCompactAll(t,ts,x,xs)
+
+
+load DataInterp_exp1_hours tspan sol
+t = tspan(21:end,:); x = sol(21:end,:);
+load DataInterp_exp1_hours_phase2AdditionalData_SMOOTH.mat tspan sol
+ts = tspan; xs = sol;
 
 plotSubplotsCompactAll(t,ts,x,xs)
+
 
 function plotSubplotsCompactAll(t_exp1, t_exp2, y_exp1, y_exp2)
 % tiles = tiledlayout(2,4,'TileSpacing','Compact','Padding','Compact');
